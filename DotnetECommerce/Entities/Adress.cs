@@ -3,11 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DotnetEcommerce.Entities;
 [Table("Adresses")]
-public class Adress
+public class Adress:BaseEntity
 {
-    [Key]
-    public int ID { get; set; }
-
     public string? City { get; set; }
 
     public string? Street { get; set; }

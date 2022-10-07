@@ -4,11 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DotnetEcommerce.Entities;
 
 [Table("OrderDetails")]
-public class OrderDetail
+public class OrderDetail:BaseEntity
 {
-    [Key]
-    public int ID { get; set; }
-
     public double Price { get; set; }
 
     public int Quantity { get; set; }

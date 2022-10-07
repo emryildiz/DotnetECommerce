@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DotnetEcommerce.Entities;
 
 [Table("Customers")]
-public class Customer
+public class Customer:BaseEntity
 {
     public Customer()
     {
@@ -12,9 +12,6 @@ public class Customer
         this.Orders = new List<Order>();
         this.CreatedDate = DateTime.Now;
     }
-
-    [Key]
-    public int ID { get; set; }
 
     public string? FirstName { get; set; }
 

@@ -4,16 +4,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DotnetEcommerce.Entities;
 
 [Table("Products")]
-public class Product
+public class Product:BaseEntity
 {
     public Product()
     {
         this.OrderDetails = new List<OrderDetail>();
     }
-
-    [Key]
-    public int ID { get; set; }
-
     public string? Name { get; set; }
 
     public string? Description { get; set; }

@@ -1,4 +1,5 @@
 using DotnetEcommerce.Data;
+using DotnetEcommerce.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(
                     options => options.UseSqlServer(
                         builder.Configuration.GetConnectionString("ECommerce")));
+
+builder.Services.AddScoped<AdressService>();
 
 var app = builder.Build();
 

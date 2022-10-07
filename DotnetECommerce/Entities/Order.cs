@@ -3,14 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace DotnetEcommerce.Entities;
 
 [Table("Orders")]
-public class Order
+public class Order:BaseEntity
 {
     public Order()
     {
         this.OrderDetails = new List<OrderDetail>();
     }
-
-    public int ID { get; set; }
 
     public double Amount { get; set; }
 
